@@ -1,0 +1,900 @@
+/* =========================
+   BASIC
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+    background: #f7f6f2;
+    color: #181818;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(247, 246, 242, 0.9);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.nav-container {
+    max-width: 1200px;
+    height: 80px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-size: 22x;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo-sub {
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav a {
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.5;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+    background: #e9e7df;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-small {
+    font-size: 13px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: 1.05;
+    font-weight: 900;
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    -webkit-text-stroke: 2px #181818;
+    color: transparent;
+}
+
+.hero-description {
+    margin-top: 35px;
+    font-size: 17px;
+    color: #555;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.primary {
+    background: #181818;
+    color: white;
+}
+
+.secondary {
+    border: 1px solid #181818;
+}
+
+.white {
+    background: white;
+    color: #181818;
+}
+
+.hero-decoration {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 500px;
+    height: 500px;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    width: 350px;
+    height: 350px;
+    background: #d5d1c5;
+    right: 0;
+    top: 40px;
+}
+
+.circle-2 {
+    width: 220px;
+    height: 220px;
+    background: #b8b4a8;
+    right: 150px;
+    top: 200px;
+}
+
+.circle-3 {
+    width: 80px;
+    height: 80px;
+    background: #181818;
+    right: 100px;
+    top: 100px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 120px 25px;
+}
+
+.section-title {
+    margin-bottom: 70px;
+}
+
+.section-title span {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.section-title h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.section-title p {
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 80px;
+}
+
+.about-text h3 {
+    font-size: 35px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.info-list {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.info-list div {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-list strong {
+    font-size: 28px;
+}
+
+.info-list span {
+    font-size: 13px;
+    color: #777;
+}
+
+.about-card {
+    min-height: 400px;
+    background: #181818;
+    color: white;
+    padding: 45px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    transform: rotate(2deg);
+}
+
+.card-number {
+    font-size: 13px;
+}
+
+.about-card h3 {
+    font-size: 32px;
+    line-height: 1.5;
+}
+
+.about-card p {
+    color: #aaa;
+}
+
+
+/* =========================
+   WORKS
+========================= */
+
+.works {
+    background: #f7f6f2;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.filter {
+    border: 1px solid #ccc;
+    background: transparent;
+
+    padding: 10px 22px;
+
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: #181818;
+    color: white;
+    border-color: #181818;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.work-card {
+    background: white;
+    overflow: hidden;
+    border-radius: 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.4s;
+}
+
+.work-card:hover {
+    transform: translateY(-8px);
+}
+
+.work-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+    background: #f1f0ec;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 18px;
+    display: block;
+}
+
+.image-1 {
+    background: #d8d1c4;
+}
+
+.image-2 {
+    background: #bcb8ad;
+}
+
+.image-3 {
+    background: #d0d0cc;
+}
+
+.image-4 {
+    background: #aaa89f;
+}
+
+.image-5 {
+    background: #c9c4b9;
+}
+
+.image-6 {
+    background: #dedbd3;
+}
+
+.work-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.work-icon {
+    font-size: 60px;
+    opacity: 0.3;
+}
+
+.work-content {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.category {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.work-content h3 {
+    font-size: 26px;
+    margin: 8px 0;
+}
+
+.work-content p {
+    color: #777;
+    font-size: 14px;
+    min-height: 50px;
+}
+
+.more-btn {
+    margin-top: auto;
+    padding: 0;
+    align-self: flex-start;
+
+    border: none;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    text-decoration: none;
+
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* =========================
+   TEAMS
+========================= */
+
+.teams {
+    background: #181818;
+    color: white;
+    max-width: none;
+    padding-left: max(25px, calc((100% - 1150px) / 2));
+    padding-right: max(25px, calc((100% - 1150px) / 2));
+}
+
+.teams .section-title p {
+    color: #888;
+}
+
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    border: 1px solid #333;
+    padding: 35px;
+
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    background: #252525;
+    transform: translateY(-5px);
+}
+
+.team-avatar {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+    color: #181818;
+
+    font-size: 25px;
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+.team-card h3 {
+    font-size: 24px;
+}
+
+.team-card p {
+    color: #aaa;
+}
+
+.members {
+    font-size: 12px;
+    color: #777;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+    max-width: 800px;
+    margin: auto;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 30px;
+
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: 20px;
+    bottom: 0;
+
+    width: 2px;
+
+    background: #ddd;
+}
+
+.timeline-dot {
+    width: 18px;
+    height: 18px;
+
+    background: #181818;
+    border-radius: 50%;
+
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content span {
+    font-size: 12px;
+    color: #999;
+}
+
+.timeline-content h3 {
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+.timeline-content p {
+    color: #777;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background: #181818;
+    color: white;
+    padding: 150px 25px;
+
+    text-align: center;
+}
+
+.contact-content > p {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #999;
+}
+
+.contact h2 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 1.2;
+    margin: 25px 0 45px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #101010;
+    color: white;
+
+    padding: 45px max(25px, calc((100% - 1150px) / 2));
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer strong {
+    font-size: 13px;
+}
+
+.footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.7);
+
+    z-index: 2000;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+
+    width: min(700px, 100%);
+
+    padding: 50px;
+
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    font-size: 35px;
+
+    cursor: pointer;
+}
+
+#modalCategory {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777;
+}
+
+#modalTitle {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+#modalDescription {
+    color: #666;
+}
+
+.modal-placeholder {
+    margin-top: 30px;
+
+    height: 220px;
+
+    background: #eee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #999;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 80px;
+        left: 0;
+
+        width: 100%;
+
+        background: #f1f1ee;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-decoration {
+        opacity: 0.4;
+        right: -150px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .works-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .teams-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 120px 25px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-decoration {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 45px;
+    }
+
+    .about-text h3 {
+        font-size: 28px;
+    }
+
+    .info-list {
+        gap: 25px;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .modal-box {
+        padding: 35px 25px;
+    }
+    
+/* Hình nền toàn bộ trang web */
+body {
+    background-image: url("images/trangchu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+}
+
+/* Hình nền phần trang chủ */
+#home {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("images/trangchu.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+
+.map-link {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-size: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.map-link:hover {
+    color: #070707;
+    text-decoration: underline;
+}
+
+.event-schedule {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #4a1615bf;
+}
+
+.event-schedule p {
+    margin-bottom: 12px;
+}
+}
+
+/* 1. Trang chủ - màu kem */
+#home {
+    background-color: #FDE9D0;
+}
+
+/* 2. Giới thiệu - màu xanh nhạt */
+#about {
+    background-color: #FDE9D0;
+}
+
+/* 3. Trưng bày tác phẩm - màu hồng nhạt */
+#works {
+    background-color: #FDE9D0;
+}
+
+/* 4. Giới thiệu nhóm - màu tím nhạt */
+#teams {
+    background-color: #FDE9D0;
+}
+
+/* 5. Liên hệ - màu vàng nhạt */
+#contact {
+    background-color: #FDE9D0;
+}
